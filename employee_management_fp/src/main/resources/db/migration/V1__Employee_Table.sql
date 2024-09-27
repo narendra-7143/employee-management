@@ -1,0 +1,14 @@
+CREATE TABLE employee(
+    id VARCHAR(36) NOT NULL,
+    created_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    updated_time TIMESTAMP DEFAULT NULL, 
+    status VARCHAR(12) DEFAULT 'ACTIVE',
+    name VARCHAR(36) NOT NULL,
+    role VARCHAR(36) NOT NULL,
+    age INT NOT NULL,
+    gender VARCHAR(12),
+    salary INT NOT NULL,
+    phone_number VARCHAR(10) NOT NULL,
+    aadhar VARCHAR(12) NOT NULL,
+    PRIMARY KEY (id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
