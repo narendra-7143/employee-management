@@ -24,7 +24,18 @@ public class EmployeeController {
     @Autowired
     private EmployeeService employeeService;
 
-    
+    /* create new employee 
+		 {
+		  "name": "string",
+		  "role": "string",
+		  "age": 0,
+		  "status": "ACTIVE",
+		  "phoneNumber": "string(10)",
+		  "gender": "MALE",
+		  "salary": 0,
+		  "aadhar": "string(12)"
+		}
+     */
     @PostMapping(consumes = "application/json")
     public ResponseEntity<Message> createEmployee(
     		@RequestBody @Valid EmployeeRequest employeeRequest) {
@@ -33,6 +44,18 @@ public class EmployeeController {
     		return ResponseEntity.ok(new Message(message));  	
     }
 
+    /*  edit details of existing employee
+		 {
+		  "name": "string",
+		  "role": "string",
+		  "age": 0,
+		  "status": "ACTIVE",
+		  "phoneNumber": "string(10)",
+		  "gender": "MALE",
+		  "salary": 0,
+		  "aadhar": "string(12)"  
+		}
+     */
     
     @PutMapping(value = "/{id}", consumes = "application/json")
     public ResponseEntity<Message> updateEmployee(@PathVariable String id, @RequestBody @Valid EmployeeRequest employeeRequest){
@@ -42,6 +65,7 @@ public class EmployeeController {
     }
 
     
+    /*  get employee details by id */
     @GetMapping(value = "/{id}", produces = "application/json")
     public ResponseEntity<EmployeeResponse> getEmployeeById(@PathVariable String id) {
 
@@ -49,7 +73,7 @@ public class EmployeeController {
     	        return ResponseEntity.ok(response);
     }
 
-    
+    /*  get all employees by paginated response */
     @GetMapping(produces = "application/json")
     public ResponseEntity<PageResponse<EmployeeResponse>> getAllEmployees(@RequestParam(name = "page", defaultValue = "0") int page,
 	        @RequestParam(name = "size", defaultValue = "10") int size) {
@@ -58,6 +82,7 @@ public class EmployeeController {
             return ResponseEntity.ok(responses);
     }
     
+    /*  delete employee by id */
     @DeleteMapping(value = "/{id}")
     public ResponseEntity<Message> deleteEmployeeById(@PathVariable String id) {
 
@@ -65,6 +90,7 @@ public class EmployeeController {
 	        return ResponseEntity.ok(new Message(response));
     }
     
+    /*  update status of employee by id */
     @PatchMapping(value = "/id/{id}/status/{status}")
     public ResponseEntity<Message> updateEmployee(@PathVariable String id, @PathVariable StatusType status){
     	

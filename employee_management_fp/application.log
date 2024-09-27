@@ -1,191 +1,116 @@
-2024-09-27 23:51:07.520  INFO 13900 --- [main] com.exm.fp.DemoTemplateApplication       : Starting DemoTemplateApplication using Java 21.0.3 on LAPTOP-KQG8195L with PID 13900 (C:\Users\naren\Documents\workspace-spring-tool-suite-4\employee_management_fp\target\classes started by naren in C:\Users\naren\Documents\workspace-spring-tool-suite-4\employee_management_fp)
-2024-09-27 23:51:07.523  INFO 13900 --- [main] com.exm.fp.DemoTemplateApplication       : No active profile set, falling back to 1 default profile: "default"
-2024-09-27 23:51:08.216  INFO 13900 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-09-27 23:51:08.259  INFO 13900 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 32 ms. Found 1 JPA repository interfaces.
-2024-09-27 23:51:08.729  INFO 13900 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8083 (http)
-2024-09-27 23:51:08.743  INFO 13900 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-09-27 23:51:08.743  INFO 13900 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.75]
-2024-09-27 23:51:08.887  INFO 13900 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-09-27 23:51:08.887  INFO 13900 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1198 ms
-2024-09-27 23:51:09.044  INFO 13900 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 8.5.13 by Redgate
-2024-09-27 23:51:09.044  INFO 13900 --- [main] o.f.c.internal.license.VersionPrinter    : See what's new here: https://flywaydb.org/documentation/learnmore/releaseNotes#8.5.13
-2024-09-27 23:51:09.044  INFO 13900 --- [main] o.f.c.internal.license.VersionPrinter    : 
-2024-09-27 23:51:09.045 DEBUG 13900 --- [main] o.f.core.internal.util.FeatureDetector   : AWS SDK available: false
-2024-09-27 23:51:09.046 DEBUG 13900 --- [main] o.f.core.internal.util.FeatureDetector   : Google Cloud Storage available: false
-2024-09-27 23:51:09.047 DEBUG 13900 --- [main] o.f.c.i.s.classpath.ClassPathScanner     : Scanning for classpath resources at 'classpath:db/callback' ...
-2024-09-27 23:51:09.047 DEBUG 13900 --- [main] o.f.c.i.s.classpath.ClassPathScanner     : Determining location urls for classpath:db/callback using ClassLoader jdk.internal.loader.ClassLoaders$AppClassLoader@2a098129 ...
-2024-09-27 23:51:09.048 DEBUG 13900 --- [main] o.f.c.i.s.classpath.ClassPathScanner     : Unable to resolve location classpath:db/callback.
-2024-09-27 23:51:09.048 DEBUG 13900 --- [main] o.f.c.i.s.classpath.ClassPathScanner     : Scanning for classpath resources at 'classpath:db/migration' ...
-2024-09-27 23:51:09.048 DEBUG 13900 --- [main] o.f.c.i.s.classpath.ClassPathScanner     : Determining location urls for classpath:db/migration using ClassLoader jdk.internal.loader.ClassLoaders$AppClassLoader@2a098129 ...
-2024-09-27 23:51:09.048 DEBUG 13900 --- [main] o.f.c.i.s.classpath.ClassPathScanner     : Scanning URL: file:/C:/Users/naren/Documents/workspace-spring-tool-suite-4/employee_management_fp/target/classes/db/migration
-2024-09-27 23:51:09.049 DEBUG 13900 --- [main] o.f.core.internal.util.FeatureDetector   : JBoss VFS v2 available: false
-2024-09-27 23:51:09.050 DEBUG 13900 --- [main] i.s.c.FileSystemClassPathLocationScanner : Scanning starting at classpath root in filesystem: C:\Users\naren\Documents\workspace-spring-tool-suite-4\employee_management_fp\target\classes\
-2024-09-27 23:51:09.053 DEBUG 13900 --- [main] i.s.c.FileSystemClassPathLocationScanner : Scanning for resources in path: C:\Users\naren\Documents\workspace-spring-tool-suite-4\employee_management_fp\target\classes\db\migration (db/migration)
-2024-09-27 23:51:09.055 DEBUG 13900 --- [main] o.f.c.i.s.classpath.ClassPathScanner     : Found resource: db/migration/V1__Employee_Table.sql
-2024-09-27 23:51:09.055 DEBUG 13900 --- [main] o.f.c.i.s.classpath.ClassPathScanner     : Scanning for classes at classpath:db/migration
-2024-09-27 23:51:09.057 DEBUG 13900 --- [main] o.f.c.i.resource.ResourceNameValidator   : Validating V1__Employee_Table.sql
-2024-09-27 23:51:09.060 DEBUG 13900 --- [main] o.s.j.datasource.SimpleDriverDataSource  : Creating new JDBC Driver Connection to [jdbc:mysql://localhost:3306/em_db]
-2024-09-27 23:51:09.449  INFO 13900 --- [main] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:mysql://localhost:3306/em_db (MySQL 8.0)
-2024-09-27 23:51:09.449 DEBUG 13900 --- [main] o.f.c.i.database.base.BaseDatabaseType   : Driver  : MySQL Connector/J mysql-connector-j-8.0.33 (Revision: 7d6b0800528b6b25c68b52dc10d6c1c8429c100c)
-2024-09-27 23:51:09.456 DEBUG 13900 --- [main] org.flywaydb.core.FlywayExecutor         : DDL Transactions Supported: false
-2024-09-27 23:51:09.457 DEBUG 13900 --- [main] o.f.c.i.s.SchemaHistoryFactory           : Schemas: 
-2024-09-27 23:51:09.458 DEBUG 13900 --- [main] o.f.c.i.s.SchemaHistoryFactory           : Default schema: null
-2024-09-27 23:51:09.472 DEBUG 13900 --- [main] o.f.c.i.c.SqlScriptCallbackFactory       : Scanning for SQL callbacks ...
-2024-09-27 23:51:09.481 DEBUG 13900 --- [main] o.f.core.internal.command.DbValidate     : Validating migrations ...
-2024-09-27 23:51:09.489 DEBUG 13900 --- [main] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V1__Employee_Table.sql (filename: V1__Employee_Table.sql)
-2024-09-27 23:51:09.495  INFO 13900 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 1 migration (execution time 00:00.013s)
-2024-09-27 23:51:09.509 DEBUG 13900 --- [main] o.f.core.internal.command.DbSchemas      : Skipping creation of existing schema: `em_db`
-2024-09-27 23:51:09.515  INFO 13900 --- [main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table `em_db`.`em_flyway_table` ...
-2024-09-27 23:51:09.518 DEBUG 13900 --- [main] o.flywaydb.core.internal.parser.Parser   : Parsing  ...
-2024-09-27 23:51:09.526 DEBUG 13900 --- [main] o.f.c.i.sqlscript.ParserSqlScript        : Found statement at line 1: CREATE TABLE `em_db`.`em_flyway_table` (
-    `installed_rank` INT NOT NULL,
-    `version` VARCHAR(50),
-    `description` VARCHAR(200) NOT NULL,
-    `type` VARCHAR(20) NOT NULL,
-    `script` VARCHAR(1000) NOT NULL,
-    `checksum` INT,
-    `installed_by` VARCHAR(100) NOT NULL,
-    `installed_on` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    `execution_time` INT NOT NULL,
-    `success` BOOL NOT NULL,
-    CONSTRAINT `em_flyway_table_pk` PRIMARY KEY (`installed_rank`)
-) ENGINE=InnoDB
-2024-09-27 23:51:09.526 DEBUG 13900 --- [main] o.f.c.i.sqlscript.ParserSqlScript        : Found statement at line 14: CREATE INDEX `em_flyway_table_s_idx` ON `em_db`.`em_flyway_table` (`success`)
-2024-09-27 23:51:09.526 DEBUG 13900 --- [main] o.f.c.i.s.DefaultSqlScriptExecutor       : Executing SQL: CREATE TABLE `em_db`.`em_flyway_table` (
-    `installed_rank` INT NOT NULL,
-    `version` VARCHAR(50),
-    `description` VARCHAR(200) NOT NULL,
-    `type` VARCHAR(20) NOT NULL,
-    `script` VARCHAR(1000) NOT NULL,
-    `checksum` INT,
-    `installed_by` VARCHAR(100) NOT NULL,
-    `installed_on` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    `execution_time` INT NOT NULL,
-    `success` BOOL NOT NULL,
-    CONSTRAINT `em_flyway_table_pk` PRIMARY KEY (`installed_rank`)
-) ENGINE=InnoDB
-2024-09-27 23:51:09.547 DEBUG 13900 --- [main] o.f.c.i.s.DefaultSqlScriptExecutor       : 0 rows affected
-2024-09-27 23:51:09.547 DEBUG 13900 --- [main] o.f.c.i.s.DefaultSqlScriptExecutor       : Executing SQL: CREATE INDEX `em_flyway_table_s_idx` ON `em_db`.`em_flyway_table` (`success`)
-2024-09-27 23:51:09.574 DEBUG 13900 --- [main] o.f.c.i.s.DefaultSqlScriptExecutor       : 0 rows affected
-2024-09-27 23:51:09.574 DEBUG 13900 --- [main] o.f.c.i.s.JdbcTableSchemaHistory         : Created Schema History table `em_db`.`em_flyway_table`
-2024-09-27 23:51:09.590  INFO 13900 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema `em_db`: << Empty Schema >>
-2024-09-27 23:51:09.591 DEBUG 13900 --- [main] o.flywaydb.core.internal.parser.Parser   : Parsing V1__Employee_Table.sql ...
-2024-09-27 23:51:09.595 DEBUG 13900 --- [main] o.f.c.i.sqlscript.ParserSqlScript        : Found statement at line 1: CREATE TABLE employee(
-    id VARCHAR(36) NOT NULL,
-    created_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    updated_time TIMESTAMP DEFAULT NULL, 
-    status VARCHAR(12) DEFAULT 'ACTIVE',
-    name VARCHAR(36) NOT NULL,
-    role VARCHAR(36) NOT NULL,
-    age INT NOT NULL,
-    gender VARCHAR(12),
-    salary INT NOT NULL,
-    phone_number VARCHAR(10) NOT NULL,
-    aadhar VARCHAR(12) NOT NULL,
-    PRIMARY KEY (id)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
-2024-09-27 23:51:09.597 DEBUG 13900 --- [main] o.f.core.internal.command.DbMigrate      : Starting migration of schema `em_db` to version "1 - Employee Table" ...
-2024-09-27 23:51:09.600  INFO 13900 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema `em_db` to version "1 - Employee Table"
-2024-09-27 23:51:09.604 DEBUG 13900 --- [main] o.f.c.i.s.DefaultSqlScriptExecutor       : Executing SQL: CREATE TABLE employee(
-    id VARCHAR(36) NOT NULL,
-    created_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    updated_time TIMESTAMP DEFAULT NULL, 
-    status VARCHAR(12) DEFAULT 'ACTIVE',
-    name VARCHAR(36) NOT NULL,
-    role VARCHAR(36) NOT NULL,
-    age INT NOT NULL,
-    gender VARCHAR(12),
-    salary INT NOT NULL,
-    phone_number VARCHAR(10) NOT NULL,
-    aadhar VARCHAR(12) NOT NULL,
-    PRIMARY KEY (id)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
-2024-09-27 23:51:09.620 DEBUG 13900 --- [main] o.f.c.i.s.DefaultSqlScriptExecutor       : 0 rows affected
-2024-09-27 23:51:09.621 DEBUG 13900 --- [main] o.f.core.internal.command.DbMigrate      : Successfully completed migration of schema `em_db` to version "1 - Employee Table"
-2024-09-27 23:51:09.634 DEBUG 13900 --- [main] o.f.c.i.s.JdbcTableSchemaHistory         : Schema History table `em_db`.`em_flyway_table` successfully updated to reflect changes
-2024-09-27 23:51:09.648  INFO 13900 --- [main] o.f.core.internal.command.DbMigrate      : Successfully applied 1 migration to schema `em_db`, now at version v1 (execution time 00:00.064s)
-2024-09-27 23:51:09.654 DEBUG 13900 --- [main] org.flywaydb.core.FlywayExecutor         : Memory usage: 50 of 152M
-2024-09-27 23:51:09.709  INFO 13900 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-09-27 23:51:09.747  INFO 13900 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
-2024-09-27 23:51:09.870  INFO 13900 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2024-09-27 23:51:09.946  INFO 13900 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-09-27 23:51:09.979  INFO 13900 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-09-27 23:51:10.001  INFO 13900 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2024-09-27 23:51:10.545  INFO 13900 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2024-09-27 23:51:10.557  INFO 13900 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-09-27 23:51:10.999  WARN 13900 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-09-27 23:51:11.638  INFO 13900 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8083 (http) with context path ''
-2024-09-27 23:51:11.645  INFO 13900 --- [main] com.exm.fp.DemoTemplateApplication       : Started DemoTemplateApplication in 4.426 seconds (JVM running for 5.101)
-2024-09-27 23:51:36.049  INFO 13900 --- [http-nio-8083-exec-4] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-09-27 23:51:36.049  INFO 13900 --- [http-nio-8083-exec-4] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-09-27 23:51:36.050  INFO 13900 --- [http-nio-8083-exec-4] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2024-09-28 00:01:39.766  INFO 13264 --- [main] com.exm.fp.DemoTemplateApplication       : Starting DemoTemplateApplication using Java 21.0.3 on LAPTOP-KQG8195L with PID 13264 (C:\Users\naren\Documents\workspace-spring-tool-suite-4\employee_management_fp\target\classes started by naren in C:\Users\naren\Documents\workspace-spring-tool-suite-4\employee_management_fp)
-2024-09-28 00:01:39.770  INFO 13264 --- [main] com.exm.fp.DemoTemplateApplication       : No active profile set, falling back to 1 default profile: "default"
-2024-09-28 00:01:40.318  INFO 13264 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-09-28 00:01:40.358  INFO 13264 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 32 ms. Found 1 JPA repository interfaces.
-2024-09-28 00:01:40.758  INFO 13264 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8083 (http)
-2024-09-28 00:01:40.770  INFO 13264 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-09-28 00:01:40.771  INFO 13264 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.75]
-2024-09-28 00:01:40.878  INFO 13264 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-09-28 00:01:40.879  INFO 13264 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1050 ms
-2024-09-28 00:01:40.995  INFO 13264 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 8.5.13 by Redgate
-2024-09-28 00:01:40.996  INFO 13264 --- [main] o.f.c.internal.license.VersionPrinter    : See what's new here: https://flywaydb.org/documentation/learnmore/releaseNotes#8.5.13
-2024-09-28 00:01:40.996  INFO 13264 --- [main] o.f.c.internal.license.VersionPrinter    : 
-2024-09-28 00:01:40.997 DEBUG 13264 --- [main] o.f.core.internal.util.FeatureDetector   : AWS SDK available: false
-2024-09-28 00:01:40.997 DEBUG 13264 --- [main] o.f.core.internal.util.FeatureDetector   : Google Cloud Storage available: false
-2024-09-28 00:01:40.998 DEBUG 13264 --- [main] o.f.c.i.s.classpath.ClassPathScanner     : Scanning for classpath resources at 'classpath:db/callback' ...
-2024-09-28 00:01:40.998 DEBUG 13264 --- [main] o.f.c.i.s.classpath.ClassPathScanner     : Determining location urls for classpath:db/callback using ClassLoader jdk.internal.loader.ClassLoaders$AppClassLoader@2a098129 ...
-2024-09-28 00:01:40.998 DEBUG 13264 --- [main] o.f.c.i.s.classpath.ClassPathScanner     : Unable to resolve location classpath:db/callback.
-2024-09-28 00:01:40.998 DEBUG 13264 --- [main] o.f.c.i.s.classpath.ClassPathScanner     : Scanning for classpath resources at 'classpath:db/migration' ...
-2024-09-28 00:01:40.998 DEBUG 13264 --- [main] o.f.c.i.s.classpath.ClassPathScanner     : Determining location urls for classpath:db/migration using ClassLoader jdk.internal.loader.ClassLoaders$AppClassLoader@2a098129 ...
-2024-09-28 00:01:40.998 DEBUG 13264 --- [main] o.f.c.i.s.classpath.ClassPathScanner     : Scanning URL: file:/C:/Users/naren/Documents/workspace-spring-tool-suite-4/employee_management_fp/target/classes/db/migration
-2024-09-28 00:01:40.998 DEBUG 13264 --- [main] o.f.core.internal.util.FeatureDetector   : JBoss VFS v2 available: false
-2024-09-28 00:01:41.000 DEBUG 13264 --- [main] i.s.c.FileSystemClassPathLocationScanner : Scanning starting at classpath root in filesystem: C:\Users\naren\Documents\workspace-spring-tool-suite-4\employee_management_fp\target\classes\
-2024-09-28 00:01:41.001 DEBUG 13264 --- [main] i.s.c.FileSystemClassPathLocationScanner : Scanning for resources in path: C:\Users\naren\Documents\workspace-spring-tool-suite-4\employee_management_fp\target\classes\db\migration (db/migration)
-2024-09-28 00:01:41.002 DEBUG 13264 --- [main] o.f.c.i.s.classpath.ClassPathScanner     : Found resource: db/migration/V1__Employee_Table.sql
-2024-09-28 00:01:41.003 DEBUG 13264 --- [main] o.f.c.i.s.classpath.ClassPathScanner     : Scanning for classes at classpath:db/migration
-2024-09-28 00:01:41.005 DEBUG 13264 --- [main] o.f.c.i.resource.ResourceNameValidator   : Validating V1__Employee_Table.sql
-2024-09-28 00:01:41.007 DEBUG 13264 --- [main] o.s.j.datasource.SimpleDriverDataSource  : Creating new JDBC Driver Connection to [jdbc:mysql://localhost:3306/em_db]
-2024-09-28 00:01:41.346  INFO 13264 --- [main] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:mysql://localhost:3306/em_db (MySQL 8.0)
-2024-09-28 00:01:41.346 DEBUG 13264 --- [main] o.f.c.i.database.base.BaseDatabaseType   : Driver  : MySQL Connector/J mysql-connector-j-8.0.33 (Revision: 7d6b0800528b6b25c68b52dc10d6c1c8429c100c)
-2024-09-28 00:01:41.352 DEBUG 13264 --- [main] org.flywaydb.core.FlywayExecutor         : DDL Transactions Supported: false
-2024-09-28 00:01:41.353 DEBUG 13264 --- [main] o.f.c.i.s.SchemaHistoryFactory           : Schemas: 
-2024-09-28 00:01:41.353 DEBUG 13264 --- [main] o.f.c.i.s.SchemaHistoryFactory           : Default schema: null
-2024-09-28 00:01:41.363 DEBUG 13264 --- [main] o.f.c.i.c.SqlScriptCallbackFactory       : Scanning for SQL callbacks ...
-2024-09-28 00:01:41.370 DEBUG 13264 --- [main] o.f.core.internal.command.DbValidate     : Validating migrations ...
-2024-09-28 00:01:41.377 DEBUG 13264 --- [main] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V1__Employee_Table.sql (filename: V1__Employee_Table.sql)
-2024-09-28 00:01:41.391  INFO 13264 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 1 migration (execution time 00:00.019s)
-2024-09-28 00:01:41.405  INFO 13264 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema `em_db`: 1
-2024-09-28 00:01:41.406  INFO 13264 --- [main] o.f.core.internal.command.DbMigrate      : Schema `em_db` is up to date. No migration necessary.
-2024-09-28 00:01:41.412 DEBUG 13264 --- [main] org.flywaydb.core.FlywayExecutor         : Memory usage: 49 of 152M
-2024-09-28 00:01:41.473  INFO 13264 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-09-28 00:01:41.518  INFO 13264 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
-2024-09-28 00:01:41.679  INFO 13264 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2024-09-28 00:01:41.748  INFO 13264 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-09-28 00:01:41.771  INFO 13264 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-09-28 00:01:41.790  INFO 13264 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2024-09-28 00:01:42.244  INFO 13264 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2024-09-28 00:01:42.253  INFO 13264 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-09-28 00:01:42.639  WARN 13264 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-09-28 00:01:43.231  WARN 13264 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 8083 is already in use
-2024-09-28 00:01:43.233  INFO 13264 --- [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-09-28 00:01:43.234  INFO 13264 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-09-28 00:01:43.238  INFO 13264 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2024-09-28 00:01:43.239  INFO 13264 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2024-09-28 00:01:43.246  INFO 13264 --- [main] ConditionEvaluationReportLoggingListener : 
-
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2024-09-28 00:01:43.263 ERROR 13264 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-Web server failed to start. Port 8083 was already in use.
-
-Action:
-
-Identify and stop the process that's listening on port 8083 or configure this application to listen on another port.
-
+2024-09-28 01:08:07.236  WARN 13900 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=52m26s737ms60µs500ns).
+2024-09-28 01:09:42.765  INFO 13900 --- [http-nio-8083-exec-4] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 172 ms
+2024-09-28 01:22:21.932  INFO 20192 --- [main] com.exm.fp.DemoTemplateApplication       : Starting DemoTemplateApplication using Java 21.0.3 on LAPTOP-KQG8195L with PID 20192 (C:\Users\naren\Documents\workspace-spring-tool-suite-4\employee_management_fp\target\classes started by naren in C:\Users\naren\Documents\workspace-spring-tool-suite-4\employee_management_fp)
+2024-09-28 01:22:21.935  INFO 20192 --- [main] com.exm.fp.DemoTemplateApplication       : No active profile set, falling back to 1 default profile: "default"
+2024-09-28 01:22:22.443  INFO 20192 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-28 01:22:22.479  INFO 20192 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 29 ms. Found 1 JPA repository interfaces.
+2024-09-28 01:22:22.887  INFO 20192 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8083 (http)
+2024-09-28 01:22:22.901  INFO 20192 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-28 01:22:22.902  INFO 20192 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.75]
+2024-09-28 01:22:23.017  INFO 20192 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-09-28 01:22:23.017  INFO 20192 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1022 ms
+2024-09-28 01:22:23.122  INFO 20192 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 8.5.13 by Redgate
+2024-09-28 01:22:23.122  INFO 20192 --- [main] o.f.c.internal.license.VersionPrinter    : See what's new here: https://flywaydb.org/documentation/learnmore/releaseNotes#8.5.13
+2024-09-28 01:22:23.123  INFO 20192 --- [main] o.f.c.internal.license.VersionPrinter    : 
+2024-09-28 01:22:23.124 DEBUG 20192 --- [main] o.f.core.internal.util.FeatureDetector   : AWS SDK available: false
+2024-09-28 01:22:23.125 DEBUG 20192 --- [main] o.f.core.internal.util.FeatureDetector   : Google Cloud Storage available: false
+2024-09-28 01:22:23.126 DEBUG 20192 --- [main] o.f.c.i.s.classpath.ClassPathScanner     : Scanning for classpath resources at 'classpath:db/callback' ...
+2024-09-28 01:22:23.127 DEBUG 20192 --- [main] o.f.c.i.s.classpath.ClassPathScanner     : Determining location urls for classpath:db/callback using ClassLoader jdk.internal.loader.ClassLoaders$AppClassLoader@2a098129 ...
+2024-09-28 01:22:23.131 DEBUG 20192 --- [main] o.f.c.i.s.classpath.ClassPathScanner     : Unable to resolve location classpath:db/callback.
+2024-09-28 01:22:23.131 DEBUG 20192 --- [main] o.f.c.i.s.classpath.ClassPathScanner     : Scanning for classpath resources at 'classpath:db/migration' ...
+2024-09-28 01:22:23.132 DEBUG 20192 --- [main] o.f.c.i.s.classpath.ClassPathScanner     : Determining location urls for classpath:db/migration using ClassLoader jdk.internal.loader.ClassLoaders$AppClassLoader@2a098129 ...
+2024-09-28 01:22:23.133 DEBUG 20192 --- [main] o.f.c.i.s.classpath.ClassPathScanner     : Scanning URL: file:/C:/Users/naren/Documents/workspace-spring-tool-suite-4/employee_management_fp/target/classes/db/migration
+2024-09-28 01:22:23.134 DEBUG 20192 --- [main] o.f.core.internal.util.FeatureDetector   : JBoss VFS v2 available: false
+2024-09-28 01:22:23.135 DEBUG 20192 --- [main] i.s.c.FileSystemClassPathLocationScanner : Scanning starting at classpath root in filesystem: C:\Users\naren\Documents\workspace-spring-tool-suite-4\employee_management_fp\target\classes\
+2024-09-28 01:22:23.135 DEBUG 20192 --- [main] i.s.c.FileSystemClassPathLocationScanner : Scanning for resources in path: C:\Users\naren\Documents\workspace-spring-tool-suite-4\employee_management_fp\target\classes\db\migration (db/migration)
+2024-09-28 01:22:23.137 DEBUG 20192 --- [main] o.f.c.i.s.classpath.ClassPathScanner     : Found resource: db/migration/V1__Employee_Table.sql
+2024-09-28 01:22:23.137 DEBUG 20192 --- [main] o.f.c.i.s.classpath.ClassPathScanner     : Scanning for classes at classpath:db/migration
+2024-09-28 01:22:23.139 DEBUG 20192 --- [main] o.f.c.i.resource.ResourceNameValidator   : Validating V1__Employee_Table.sql
+2024-09-28 01:22:23.140 DEBUG 20192 --- [main] o.s.j.datasource.SimpleDriverDataSource  : Creating new JDBC Driver Connection to [jdbc:mysql://localhost:3306/em_db]
+2024-09-28 01:22:23.486  INFO 20192 --- [main] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:mysql://localhost:3306/em_db (MySQL 8.0)
+2024-09-28 01:22:23.486 DEBUG 20192 --- [main] o.f.c.i.database.base.BaseDatabaseType   : Driver  : MySQL Connector/J mysql-connector-j-8.0.33 (Revision: 7d6b0800528b6b25c68b52dc10d6c1c8429c100c)
+2024-09-28 01:22:23.500 DEBUG 20192 --- [main] org.flywaydb.core.FlywayExecutor         : DDL Transactions Supported: false
+2024-09-28 01:22:23.502 DEBUG 20192 --- [main] o.f.c.i.s.SchemaHistoryFactory           : Schemas: 
+2024-09-28 01:22:23.502 DEBUG 20192 --- [main] o.f.c.i.s.SchemaHistoryFactory           : Default schema: null
+2024-09-28 01:22:23.534 DEBUG 20192 --- [main] o.f.c.i.c.SqlScriptCallbackFactory       : Scanning for SQL callbacks ...
+2024-09-28 01:22:23.544 DEBUG 20192 --- [main] o.f.core.internal.command.DbValidate     : Validating migrations ...
+2024-09-28 01:22:23.554 DEBUG 20192 --- [main] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V1__Employee_Table.sql (filename: V1__Employee_Table.sql)
+2024-09-28 01:22:23.592  INFO 20192 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 1 migration (execution time 00:00.046s)
+2024-09-28 01:22:23.605  INFO 20192 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema `em_db`: 1
+2024-09-28 01:22:23.606  INFO 20192 --- [main] o.f.core.internal.command.DbMigrate      : Schema `em_db` is up to date. No migration necessary.
+2024-09-28 01:22:23.613 DEBUG 20192 --- [main] org.flywaydb.core.FlywayExecutor         : Memory usage: 26 of 54M
+2024-09-28 01:22:23.660  INFO 20192 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-28 01:22:23.697  INFO 20192 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
+2024-09-28 01:22:23.828  INFO 20192 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-09-28 01:22:23.942  INFO 20192 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-09-28 01:22:23.970  INFO 20192 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-09-28 01:22:23.994  INFO 20192 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2024-09-28 01:22:24.523  INFO 20192 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-09-28 01:22:24.535  INFO 20192 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-28 01:22:25.001  WARN 20192 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-28 01:22:25.658  INFO 20192 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8083 (http) with context path ''
+2024-09-28 01:22:25.664  INFO 20192 --- [main] com.exm.fp.DemoTemplateApplication       : Started DemoTemplateApplication in 4.052 seconds (JVM running for 4.848)
+2024-09-28 01:22:34.086  INFO 20192 --- [http-nio-8083-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-28 01:22:34.086  INFO 20192 --- [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-09-28 01:22:34.089  INFO 20192 --- [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-09-28 01:22:34.449  INFO 20192 --- [http-nio-8083-exec-4] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 189 ms
+2024-09-28 01:42:40.865  WARN 20192 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m16s487ms558µs900ns).
+2024-09-28 01:52:02.468  INFO 20192 --- [RMI TCP Connection(31)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2024-09-28 01:52:02.476  INFO 20192 --- [RMI TCP Connection(31)-127.0.0.1] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-09-28 01:52:02.478  INFO 20192 --- [RMI TCP Connection(31)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2024-09-28 01:52:02.500  INFO 20192 --- [RMI TCP Connection(31)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-28 01:52:02.503  INFO 20192 --- [RMI TCP Connection(31)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-09-28 01:52:02.512  INFO 20192 --- [RMI TCP Connection(31)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-09-28 01:52:07.130  INFO 2916 --- [main] com.exm.fp.DemoTemplateApplication       : Starting DemoTemplateApplication using Java 21.0.3 on LAPTOP-KQG8195L with PID 2916 (C:\Users\naren\Documents\workspace-spring-tool-suite-4\employee_management_fp\target\classes started by naren in C:\Users\naren\Documents\workspace-spring-tool-suite-4\employee_management_fp)
+2024-09-28 01:52:07.133  INFO 2916 --- [main] com.exm.fp.DemoTemplateApplication       : No active profile set, falling back to 1 default profile: "default"
+2024-09-28 01:52:07.695  INFO 2916 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-28 01:52:07.733  INFO 2916 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 32 ms. Found 1 JPA repository interfaces.
+2024-09-28 01:52:08.132  INFO 2916 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-09-28 01:52:08.144  INFO 2916 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-28 01:52:08.144  INFO 2916 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.75]
+2024-09-28 01:52:08.250  INFO 2916 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-09-28 01:52:08.251  INFO 2916 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1072 ms
+2024-09-28 01:52:08.375  INFO 2916 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 8.5.13 by Redgate
+2024-09-28 01:52:08.375  INFO 2916 --- [main] o.f.c.internal.license.VersionPrinter    : See what's new here: https://flywaydb.org/documentation/learnmore/releaseNotes#8.5.13
+2024-09-28 01:52:08.375  INFO 2916 --- [main] o.f.c.internal.license.VersionPrinter    : 
+2024-09-28 01:52:08.377 DEBUG 2916 --- [main] o.f.core.internal.util.FeatureDetector   : AWS SDK available: false
+2024-09-28 01:52:08.378 DEBUG 2916 --- [main] o.f.core.internal.util.FeatureDetector   : Google Cloud Storage available: false
+2024-09-28 01:52:08.378 DEBUG 2916 --- [main] o.f.c.i.s.classpath.ClassPathScanner     : Scanning for classpath resources at 'classpath:db/callback' ...
+2024-09-28 01:52:08.379 DEBUG 2916 --- [main] o.f.c.i.s.classpath.ClassPathScanner     : Determining location urls for classpath:db/callback using ClassLoader jdk.internal.loader.ClassLoaders$AppClassLoader@2a098129 ...
+2024-09-28 01:52:08.379 DEBUG 2916 --- [main] o.f.c.i.s.classpath.ClassPathScanner     : Unable to resolve location classpath:db/callback.
+2024-09-28 01:52:08.379 DEBUG 2916 --- [main] o.f.c.i.s.classpath.ClassPathScanner     : Scanning for classpath resources at 'classpath:db/migration' ...
+2024-09-28 01:52:08.379 DEBUG 2916 --- [main] o.f.c.i.s.classpath.ClassPathScanner     : Determining location urls for classpath:db/migration using ClassLoader jdk.internal.loader.ClassLoaders$AppClassLoader@2a098129 ...
+2024-09-28 01:52:08.379 DEBUG 2916 --- [main] o.f.c.i.s.classpath.ClassPathScanner     : Scanning URL: file:/C:/Users/naren/Documents/workspace-spring-tool-suite-4/employee_management_fp/target/classes/db/migration
+2024-09-28 01:52:08.379 DEBUG 2916 --- [main] o.f.core.internal.util.FeatureDetector   : JBoss VFS v2 available: false
+2024-09-28 01:52:08.380 DEBUG 2916 --- [main] i.s.c.FileSystemClassPathLocationScanner : Scanning starting at classpath root in filesystem: C:\Users\naren\Documents\workspace-spring-tool-suite-4\employee_management_fp\target\classes\
+2024-09-28 01:52:08.380 DEBUG 2916 --- [main] i.s.c.FileSystemClassPathLocationScanner : Scanning for resources in path: C:\Users\naren\Documents\workspace-spring-tool-suite-4\employee_management_fp\target\classes\db\migration (db/migration)
+2024-09-28 01:52:08.381 DEBUG 2916 --- [main] o.f.c.i.s.classpath.ClassPathScanner     : Found resource: db/migration/V1__Employee_Table.sql
+2024-09-28 01:52:08.382 DEBUG 2916 --- [main] o.f.c.i.s.classpath.ClassPathScanner     : Scanning for classes at classpath:db/migration
+2024-09-28 01:52:08.386 DEBUG 2916 --- [main] o.f.c.i.resource.ResourceNameValidator   : Validating V1__Employee_Table.sql
+2024-09-28 01:52:08.388 DEBUG 2916 --- [main] o.s.j.datasource.SimpleDriverDataSource  : Creating new JDBC Driver Connection to [jdbc:mysql://localhost:3306/em_db]
+2024-09-28 01:52:08.720  INFO 2916 --- [main] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:mysql://localhost:3306/em_db (MySQL 8.0)
+2024-09-28 01:52:08.720 DEBUG 2916 --- [main] o.f.c.i.database.base.BaseDatabaseType   : Driver  : MySQL Connector/J mysql-connector-j-8.0.33 (Revision: 7d6b0800528b6b25c68b52dc10d6c1c8429c100c)
+2024-09-28 01:52:08.735 DEBUG 2916 --- [main] org.flywaydb.core.FlywayExecutor         : DDL Transactions Supported: false
+2024-09-28 01:52:08.737 DEBUG 2916 --- [main] o.f.c.i.s.SchemaHistoryFactory           : Schemas: 
+2024-09-28 01:52:08.737 DEBUG 2916 --- [main] o.f.c.i.s.SchemaHistoryFactory           : Default schema: null
+2024-09-28 01:52:08.751 DEBUG 2916 --- [main] o.f.c.i.c.SqlScriptCallbackFactory       : Scanning for SQL callbacks ...
+2024-09-28 01:52:08.762 DEBUG 2916 --- [main] o.f.core.internal.command.DbValidate     : Validating migrations ...
+2024-09-28 01:52:08.779 DEBUG 2916 --- [main] o.f.core.internal.scanner.Scanner        : Filtering out resource: db/migration/V1__Employee_Table.sql (filename: V1__Employee_Table.sql)
+2024-09-28 01:52:08.793  INFO 2916 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 1 migration (execution time 00:00.029s)
+2024-09-28 01:52:08.807  INFO 2916 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema `em_db`: 1
+2024-09-28 01:52:08.808  INFO 2916 --- [main] o.f.core.internal.command.DbMigrate      : Schema `em_db` is up to date. No migration necessary.
+2024-09-28 01:52:08.814 DEBUG 2916 --- [main] org.flywaydb.core.FlywayExecutor         : Memory usage: 39 of 156M
+2024-09-28 01:52:08.878  INFO 2916 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-28 01:52:08.941  INFO 2916 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
+2024-09-28 01:52:09.061  INFO 2916 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-09-28 01:52:09.143  INFO 2916 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-09-28 01:52:09.173  INFO 2916 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-09-28 01:52:09.196  INFO 2916 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2024-09-28 01:52:09.764  INFO 2916 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-09-28 01:52:09.772  INFO 2916 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-28 01:52:10.122  WARN 2916 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-28 01:52:10.671  INFO 2916 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-09-28 01:52:10.678  INFO 2916 --- [main] com.exm.fp.DemoTemplateApplication       : Started DemoTemplateApplication in 3.921 seconds (JVM running for 4.577)
+2024-09-28 01:52:27.864  INFO 2916 --- [http-nio-8080-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-28 01:52:27.865  INFO 2916 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-09-28 01:52:27.866  INFO 2916 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
