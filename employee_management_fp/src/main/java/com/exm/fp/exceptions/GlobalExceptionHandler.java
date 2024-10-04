@@ -51,30 +51,6 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
         Message message = new Message("Validation failed: " + String.join(", ", errors));
         return new ResponseEntity<>(message, HttpStatus.BAD_REQUEST);
     }
-
-    @ExceptionHandler(ConstraintViolationException.class)
-    public ResponseEntity<Object> handleConstraintViolationException(ConstraintViolationException ex, WebRequest request) {
-        List<String> errors = ex.getConstraintViolations().stream()
-                .map(violation -> violation.getPropertyPath() + ": " + violation.getMessage())
-                .collect(Collectors.toList());
-        Message message = new Message("Validation failed: " + String.join(", ", errors));
-        return new ResponseEntity<>(message, HttpStatus.BAD_REQUEST);
-    }
-
-    @Override
-    protected ResponseEntity<Object> handleExceptionInternal(Exception ex,
-                                                             Object body,
-                                                             HttpHeaders headers,
-                                                             HttpStatus status,
-                                                             WebRequest request) {
-        if (ex instanceof MethodArgumentNotValidException) {
-            return handleMethodArgumentNotValid((MethodArgumentNotValidException) ex, headers, status, request);
-        } else if (ex instanceof ConstraintViolationException) {
-            return handleConstraintViolationException((ConstraintViolationException) ex, request);
-        }
-        Message message = new Message("An unexpected error occurred: " + ex.getMessage());
-        return new ResponseEntity<>(message, HttpStatus.INTERNAL_SERVER_ERROR);
-    }
  
     @ExceptionHandler(Exception.class)
     public ResponseEntity<?> handleGlobalException(Exception ex, WebRequest request) {
